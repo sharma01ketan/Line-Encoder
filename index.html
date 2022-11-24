@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Encoder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div id="mainNav">
+        <nav id="line">
+            LINE ENCODER
+        </nav>
+    </div>
+    <section class="encode nrzL">
+        <nav id="nrzLHead" class="navAll">
+            NRZ-L (NON-RETURN-TO-ZERO-LEVEL)
+        </nav>
+        <div class="choice">
+            <div class="randfix">
+                <label for="customNrzL" class="label">CUSTOM USER INPUT</label>
+                <input type="text" id="customNrzL" class="ip customNrzLInput" placeholder="DIGITAL SIGNAL"
+                    value="">
+                <button class="gen" id="customBtnNrzL">GENERATE</button>
+            </div>
+            <div class="randfix">
+                <label for="randomNrzL" class="label">RANDOM DATA SEQUENCE</label>
+                <input type="text" id="randomNrzL" class="ip randomNrzLInput"
+                    placeholder="NO. OF CONSECUTIVE ZEROES" value="">
+                <button class="gen" id="randomBtnNrzL">GENERATE</button>
+            </div>
+        </div>
+        <div id="putNrzLCanvas" class="row"></div>
+    </section>
+    <section class="encode">
+        <nav id="nrzIHead" class="navAll">
+            NRZ-I (NON-RETURN-TO-ZERO-INVERT)
+        </nav>
+        <div class="choice">
+            <div class="randfix">
+                <label for="customNrzI" class="label">CUSTOM USER INPUT</label>
+                <input type="text" id="customNrzI" class="ip customNrzIInput" placeholder="DIGITAL SIGNAL" value="">
+                <button class="gen" id="customBtnNrzI">GENERATE</button>
+            </div>
+            <div class="randfix">
+                <label for="randomNrzI" class="label">RANDOM DATA SEQUENCE</label>
+                <input type="text" id="randomNrzI" class="ip randomNrzIInput" placeholder="NO. OF CONSECUTIVE ZEROES" value="">
+                <button class="gen" id="randomBtnNrzI">GENERATE</button>
+            </div>
+        </div>
+        <div id="putNrzICanvas" class="row"></div>
+    </section>
+    <section class="encode">
+        <nav id="manHead" class="navAll">
+            MANCHESTER
+        </nav>
+        <div class="choice">
+            <div class="randfix">
+                <label for="customMan" class="label">CUSTOM USER INPUT</label>
+                <input type="text" id="customMan" class="ip customManInput" placeholder="DIGITAL SIGNAL" value="">
+                <button class="gen" id="customBtnMan">GENERATE</button>
+            </div>
+            <div class="randfix">
+                <label for="randomMan" class="label">RANDOM DATA SEQUENCE</label>
+                <input type="text" id="randomMan" class="ip randomManInput" placeholder="NO. OF CONSECUTIVE ZEROES" value="">
+                <button class="gen" id="randomBtnMan">GENERATE</button>
+            </div>
+        </div>
+        <div id="putManCanvas" class="row"></div>
+    </section>
+    <section class="encode">
+        <nav id="diffManHead" class="navAll">
+            DIFFERENTIAL-MANCHESTER
+        </nav>
+        <div class="choice">
+            <div class="randfix">
+                <label for="customDiffMan" class="label">CUSTOM USER INPUT</label>
+                <input type="text" id="customDiffMan" class="ip customDiffManInput" placeholder="DIGITAL SIGNAL" value="">
+                <button class="gen" id="customBtnDiffMan">GENERATE</button>
+            </div>
+            <div class="randfix">
+                <label for="randomDiffMan" class="label">RANDOM DATA SEQUENCE</label>
+                <input type="text" id="randomDiffMan" class="ip randomDiffManInput" placeholder="NO. OF CONSECUTIVE ZEROES" value="">
+                <button class="gen" id="randomBtnDiffMan">GENERATE</button>
+            </div>
+        </div>
+        <div id="putDiffManCanvas" class="row"></div>
+    </section>
+    <section class="encode">
+        <nav id="amiHead" class="navAll">
+            ALTERNATE MARK INVERSION (AMI)
+        </nav>
+        <div class="choice">
+            <div class="randfix">
+                <label for="customAmi" class="label">CUSTOM USER INPUT</label>
+                <input type="text" id="customAmi" class="ip customAmiInput" placeholder="DIGITAL SIGNAL" value="">
+                <button class="gen" id="customBtnAmi">GENERATE</button>
+            </div>
+            <div class="randfix">
+                <label for="randomAmi" class="label">RANDOM DATA SEQUENCE</label>
+                <input type="text" id="randomAmi" class="ip randomAmiInput" placeholder="NO. OF CONSECUTIVE ZEROES" value="">
+                <button class="gen" id="randomBtnAmi">GENERATE</button>
+            </div>
+        </div>
+        <div id="putAmiCanvas" class="row"></div>
+    </section>
+    <section class="encode">
+        <nav id="bezsHead" class="navAll">
+            BIPOLAR WITH 8-ZERO SUBSTITUTION (B8ZS)
+        </nav>
+        <div class="choice">
+            <div class="randfix">
+                <label for="customBezs" class="label">CUSTOM USER INPUT</label>
+                <input type="text" id="customBezs" class="ip customBezsInput" placeholder="DIGITAL SIGNAL" value="">
+                <button class="gen" id="customBtnBezs">GENERATE</button>
+            </div>
+            <div class="randfix">
+                <label for="randomBezs" class="label">RANDOM DATA SEQUENCE</label>
+                <input type="text" id="randomBezs" class="ip randomBezsInput" placeholder="NO. OF CONSECUTIVE ZEROES" value="">
+                <button class="gen" id="randomBtnBezs">GENERATE</button>
+            </div>
+        </div>
+        <div id="putBezsCanvas" class="row"></div>
+    </section>
+    <section class="encode">
+        <nav id="hdbtHead" class="navAll">
+            HIGH-DENSITY-BIPOLAR 3-ZERO (HDB3)
+        </nav>
+        <div class="choice">
+            <div class="randfix">
+                <label for="customHdbt" class="label">CUSTOM USER INPUT</label>
+                <input type="text" id="customHdbt" class="ip customHdbtInput" placeholder="DIGITAL SIGNAL" value="">
+                <button class="gen" id="customBtnHdbt">GENERATE</button>
+            </div>
+            <div class="randfix">
+                <label for="randomHdbt" class="label">RANDOM DATA SEQUENCE</label>
+                <input type="text" id="randomHdbt" class="ip randomHdbtInput" placeholder="NO. OF CONSECUTIVE ZEROES" value="">
+                <button class="gen" id="randomBtnHdbt">GENERATE</button>
+            </div>
+        </div>
+        <div id="putHdbtCanvas" class="row"></div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"> </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
